@@ -1,47 +1,63 @@
 
 import './App.css'
+import { FaCat } from "react-icons/fa6";
+
+
 
 function App() {
-   return <div> <h1 class="text-3xl font-bold underline">
-   Hello world!
- </h1>
- <button className='uppercase bg-green-500 md:bg-red-600 p-2 rounded-lg'>me clique-me</button>
+   return <div className="bg-pink-300 min-h-screen flex flex-col">
+  
+  <header className="bg-white py-4 px-6 flex items-center justify-center"> 
+  <h1 className='text-2xl font-bold text-purple-800 flex items-center'><FaCat />DudaSys<FaCat /> </h1> 
+  </header>
 
- <form action="https://getform.io/f/bxoygera" method="POST">
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <input type="text" name="message" />
-  {/* add hidden Honeypot input to prevent spams */}
-  <input type="hidden" name="_gotcha" style={{ display: "none !important" }} />
-  {/* checkbox handle */}
-  <input
-    type="checkbox"
-    name="subscribe"
-    defaultValue="yes"
-    defaultChecked=""
-  />
-  <input type="hidden" name="subscribe" defaultValue="no" />
-  {/* radio button handle */}
-  <input type="radio" name="gender" defaultValue="male" defaultChecked="" />
-  <input type="radio" name="gender" defaultValue="female" />
-  <input type="radio" name="gender" defaultValue="other" />
-  {/* select field handle */}
-  <select name="work-experience">
-    <option value="one-year">0-1 years</option>
-    <option value="one-five-years">1-5 years</option>
-  </select>
-  <button type="submit">Send</button>
-</form>
+      
+  <div className="flex flex-1 items-center justify-center">
+        <form
+          action="https://getform.io/f/bxoygera"
+          method="POST"
+          className="bg-white p-8 rounded-lg shadow-lg w-80"
+        >
+          <h2 className="text-2xl font-bold mb-6 text-gray-700 text-center">
+            Entrar na sua conta
+          </h2>
+          <input
+            type="email"
+            name="email"
+            placeholder="Digite o email"
+            required
+            className="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:border-pink-500"
+          />
+          <input
+            type="password"
+            name="senha"
+            placeholder="Digite a senha"
+            required
+            className="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:border-pink-500"
+          />
+          <button
+            type="submit"
+            className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded w-full"
+          >
+            Entrar
+          </button>
+        </form>
+      </div>
+      
+    </div>
+}
 
 
-
-</div>
 
   
 
 
 
-}
+  
+
+
+
+
    
   
 export default App
